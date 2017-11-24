@@ -10,29 +10,21 @@
 <div class="card text-white bg-primary"> <div class="card-body"> <blockquote class="card-blockquote"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p> <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer> </blockquote> </div> </div>
 <br />
 <br />
-<form id="resultform" action="/inhouse" method="get">
-<p>My
-    <label for="number">Roll number</label> is<br />
-    <input type="tel" name="roll" id="roll" minlength="4" maxlength="4" required>
-  </p><br />
-<p>My
-    <label for="name">Name</label> is<br />
-    <input type="text" name="name" id="name" minlength="3" required>
-  </p><br />
-  <button type="submit" class="btn btn-primary">
-   Search
-   </button>
-    </form>
-<form id="resultform" action="/inhouse" method="get">
+<form action="/inhouse" method="get">
 <fieldset>
-<legend>Legend</legend> 
+<legend>Fill the Form</legend> 
+
 <div class="form-group"> 
-<label for="number">Roll number</label>
-    <input type="tel" name="roll" id="roll" minlength="4" maxlength="4" required> <small id="rolltext" class="form-text text-muted">Enter your Roll number.</small>
+<p><label for="number">Roll number</label></p>
+    <input type="tel" name="roll" id="roll" minlength="4" maxlength="4" required> 
+<small id="rolltext" class="form-text text-muted">Enter your Roll number.</small>
 </div>
 <div class="form-group">
-<label for="name">Name</label>
-    <input type="text" name="name" id="name" minlength="3" required> <small id="nametext" class="form-text text-muted">Enter your Full Name.</small>
+<p>
+<label for="name">Full Name</label>
+</p>
+    <input type="text" name="name" id="name" minlength="3" required>
+<small id="nametext" class="form-text text-muted">Enter your Full Name.</small>
 </div>
 <button type="submit" class="btn btn-primary">
    Search
