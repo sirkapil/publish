@@ -1,45 +1,25 @@
-<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<!DOC HTML>
+<html lang="en">
+<head>
+<title> Result </title>
+<meta char="uft-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css" />
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
-
-<!-- Inline CSS based on choices in "Settings" tab -->
-<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
-
-<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
-<div class="bootstrap-iso">
- <div class="container-fluid">
-  <div class="row">
-   <div class="col-md-6 col-sm-6 col-xs-12">
-    <form method="post">
-     <div class="form-group ">
-      <label class="control-label " for="name">
-       Name
-      </label>
-      <input class="form-control" id="name" name="name" type="text"/>
-      <span class="help-block" id="hint_name">
-       Enter your full name
-      </span>
-     </div>
-     <div class="form-group ">
-      <label class="control-label requiredField" for="number">
-       Roll Number
-       <span class="asteriskField">
-        *
-       </span>
-      </label>
-      <input class="form-control" id="number" name="number" type="text"/>
-      <span class="help-block" id="hint_number">
-       Enter your Roll Number (eg. 1234567)
-      </span>
-     </div>
-     <div class="form-group">
-      <div>
-       <button class="btn btn-primary " name="submit" type="submit">
-        Submit
-       </button>
-      </div>
-     </div>
+</head>
+<body>
+<div class="card text-white bg-primary"> <div class="card-body"> <blockquote class="card-blockquote"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p> <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer> </blockquote> </div> </div>
+<br />
+<br />
+<form id="resultform" action="/inhouse" method="get">
+<p>My
+    <label for="number">Roll number</label> is
+    <input type="tel" name="number" id="roll" minlength="4" maxlength="4" required>
+  </p><br />
+  <button type="submit" class="btn btn-primary">
+   Search
+   </button>
     </form>
-   </div>
-  </div>
- </div>
-</div>
+</body>
+</html>
+  
