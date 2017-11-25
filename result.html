@@ -4,7 +4,9 @@
 <title> Result </title>
 <meta char="uft-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css" />
@@ -12,7 +14,11 @@
 </head>
 <body>
 <article>
-<div class="card text-white bg-primary"> <div class="card-body"> <blockquote class="card-blockquote"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p> <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer> </blockquote> 
+<div class="card text-white bg-primary"> 
+<div class="card-body"> 
+<blockquote class="card-blockquote"> 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p> <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer> 
+</blockquote> 
 </div> </div>
 <center>
 <div class="card border-primary">
@@ -23,16 +29,21 @@
 <legend>Result InHouse</legend> 
 <br /><br /><br />
 <div class="form-group">
-<div class="col-lg-2">
 <label for="roll">Roll number:</label>
-    <input type="tel" name="roll" id="roll" minlength="4" maxlength="4" placeholder="Enter your Roll no." class="form-control" required>
-</div>
+<div class="input-group">
+            <div class="input-group-addon">
+<i class="fa fa-address-card"></i>
+            </div>
+    <input type="tel" name="roll" id="roll" minlength="4" maxlength="4" placeholder="Enter your Roll no." class="form-control" required="required" aria-describedby="textHelpBlock" required>
+<div class="input-group-addon append">
+              <i class="fa fa-check"></i>
+            </div>
+          </div> 
+          <span id="textHelpBlock" class="form-text text-muted">Enter last four digits of your roll number !</span>
 </div>
 <div class="form-group">
-<div class="col-lg-2">
 <label for="name">Full Name:</label>
     <input type="text" name="name" id="name" minlength="3" class="form-control" placeholder="Enter Your Full Name" required>
-</div>
 </div>
 <button type="submit" class="btn btn-primary">
    Search
