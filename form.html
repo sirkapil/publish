@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <form action="/inhouse" method="get">
+      <div class="form-group row">
+        <label class="col-4 col-form-label" for="text">Roll Number</label> 
+        <div class="col-8">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-address-card"></i>
+            </div> 
+            <input id="roll" name="roll" placeholder="Roll Number " type="tel" class="form-control here" required="required" aria-describedby="textHelpBlock"> 
+            <div class="input-group-addon append">
+              <i class="fa fa-check"></i>
+            </div>
+          </div> 
+          <span id="textHelpBlock" class="form-text text-muted">Enter last four digits of your roll number !</span>
+        </div>
+      </div> 
+      <div class="form-group row">
+        <div class="offset-4 col-8">
+          <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
