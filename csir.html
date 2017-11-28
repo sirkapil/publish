@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Form</title>
-    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css" /> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
 <body>
 <script Language="JavaScript" Type="text/javascript"><!--
@@ -18,7 +16,7 @@ if (theForm.fmno.value == "")
 
 {
 
-alert("Please enter a value for the \"Form no\" field.");
+alert("Please enter a value for the \"Roll no\" field.");
 
 theForm.fmno.focus();
 
@@ -72,7 +70,7 @@ if (theForm.fmno.value.length < 6)
 
 {
 
-alert("Please enter at least 6 characters in the \"Form no\" field.");
+alert("Please enter at least 6 characters in the \"Roll no\" field.");
 
 theForm.fmno.focus();
 
@@ -84,7 +82,7 @@ if (theForm.fmno.value.length > 6)
 
 {
 
-alert("Please enter at most 6 characters in the \"Form no\" field.");
+alert("Please enter at most 6 characters in the \"Roll no\" field.");
 
 theForm.fmno.focus();
 
@@ -156,7 +154,7 @@ if (!allValid)
 
 {
 
-alert("Please enter only digit characters in the \"Form no\" field.");
+alert("Please enter only digit characters in the \"Roll no\" field.");
 
 theForm.fmno.focus();
 
@@ -168,7 +166,7 @@ if (decPoints > 1 || !validGroups)
 
 {
 
-alert("Please enter a valid number in the \"Form no\" field.");
+alert("Please enter a valid number in the \"Roll no\" field.");
 
 theForm.fmno.focus();
 
@@ -180,7 +178,7 @@ var chkVal = allNum;
 
 var prsVal = parseFloat(allNum);
 
-if (chkVal != "" && !(prsVal >= "600001" && prsVal <= "842773"))
+if (chkVal != "" && !(prsVal >= "170001" && prsVal <= "179999"))
 
 {
 
@@ -198,7 +196,6 @@ return (true);
 
 //--></script>
 <center>
-<div class="card text-white bg-primary">
 <form name="FrontPage_Form1" method="post" action="/registration/iisstart.asp" onSubmit="return FrontPage_Form1_Validator(this)" language="JavaScript">
 
 <!--<input type="hidden" value="" name="online_application_prefix">-->
@@ -209,11 +206,11 @@ return (true);
 
 <tr>
 
-<td><font face="Arial" size="3">Enter Your Form Number :</font></td>
+<td><font face="Arial" size="3">Enter Your Roll Number :</font></td>
 
-&nbsp;<td>17D&nbsp;
+&nbsp;<td>B&nbsp;
 
-<input name="fmno" size="6" maxlength="6" tabindex="0"></input><br></td>
+<input name="fmno" size="6" maxlength="6" tabindex="0" type="tel" placeholder="Last six digits of roll number"></input><br></td>
 
 </tr>
 
@@ -261,7 +258,7 @@ return (true);
 
 <option VALUE="16"> 16 </option>
 
-<option VALUE="17">17 </option>
+<option VALUE="17"> 17 </option>
 
 <option VALUE="18"> 18 </option>
 
@@ -431,6 +428,33 @@ return (true);
 
 <option VALUE="2003"> 2003 </option>
 
+<option VALUE="2004"> 2004 </option>
+
+<option VALUE="2005"> 2005 </option>
+
+<option VALUE="2006"> 2006 </option>
+
+<option VALUE="2007"> 2007 </option>
+
+<option VALUE="2008"> 2008 </option>
+
+<option VALUE="2009"> 2009 </option>
+
+<option VALUE="2010"> 2010 </option>
+
+<option VALUE="2011"> 2011 </option>
+
+<option VALUE="2012"> 2012 </option>
+
+<option VALUE="2013"> 2013 </option>
+
+<option VALUE="2014"> 2014 </option>
+
+<option VALUE="2015"> 2015 </option>
+
+<option VALUE="2016"> 2016 </option>
+
+<option VALUE="2017"> 2017 </option>
 </select>
 
 </td>
@@ -446,17 +470,10 @@ return (true);
 <input type="submit" value="Submit"></input>&nbsp;&nbsp;&nbsp; <font face="Arial" size="3">
 
 </form>
-
-
-<br><br><br><br>
-
 <br>
-<br><br><br><br>
-
 <br>
-
-
-</div>
+<br>
+<br>
 </center>
 
 <br><br>
