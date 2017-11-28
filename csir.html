@@ -12,13 +12,13 @@ function FrontPage_Form1_Validator(theForm)
 
 {
 
-if (theForm.fmno.value == "")
+if (theForm.roll.value == "")
 
 {
 
 alert("Please enter a value for the \"Roll Number\" field.");
 
-theForm.fmno.focus();
+theForm.roll.focus();
 
 return (false);
 
@@ -66,25 +66,25 @@ return (false);
 
 }
 
-if (theForm.fmno.value.length < 4)
+if (theForm.roll.value.length < 4)
 
 {
 
 alert("Please enter at least 4 characters in the \"Roll Number\" field.");
 
-theForm.fmno.focus();
+theForm.roll.focus();
 
 return (false);
 
 }
 
-if (theForm.fmno.value.length > 4)
+if (theForm.roll.value.length > 4)
 
 {
 
 alert("Please enter at most 4 characters in the \"Roll Number\" field.");
 
-theForm.fmno.focus();
+theForm.roll.focus();
 
 return (false);
 
@@ -92,7 +92,7 @@ return (false);
 
 var checkOK = "0123456789-.,";
 
-var checkStr = theForm.fmno.value;
+var checkStr = theForm.roll.value;
 
 var allValid = true;
 
@@ -156,7 +156,7 @@ if (!allValid)
 
 alert("Please enter only digit characters in the \"Roll Number\" field.");
 
-theForm.fmno.focus();
+theForm.roll.focus();
 
 return (false);
 
@@ -168,7 +168,7 @@ if (decPoints > 1 || !validGroups)
 
 alert("Please enter a valid number in the \"Roll Number\" field.");
 
-theForm.fmno.focus();
+theForm.roll.focus();
 
 return (false);
 
@@ -184,7 +184,7 @@ if (chkVal != "" && !(prsVal >= "0001" && prsVal <= "9999"))
 
 alert("Please enter a valid number in the \"Roll Number\" field.");
 
-theForm.fmno.focus();
+theForm.roll.focus();
 
 return (false);
 
@@ -210,7 +210,7 @@ return (true);
 
 &nbsp;<td>B17 &nbsp;
 
-<input name="fmno" size="8" maxlength="4" tabindex="0" type="tel" placeholder="XXXX"></input><br></td>
+<input name="roll" size="8" maxlength="4" tabindex="0" type="tel" placeholder="••••"></input><br></td>
 
 </tr>
 
@@ -238,7 +238,7 @@ return (true);
 
 <option VALUE="06"> 6 </option>
 
-<option VALUE="07">7 </option>
+<option VALUE="07"> 7 </option>
 
 <option VALUE="08"> 8 </option>
 
@@ -461,10 +461,7 @@ return (true);
 
 </tr>
 
-</table> <br><br><br><br>
-
-<br>
-
+</table> <br><br>
 <input type="reset">&nbsp;&nbsp;
 
 <input type="submit" value="Submit"></input>&nbsp;&nbsp;&nbsp; <font face="Arial" size="3">
@@ -474,9 +471,7 @@ return (true);
 <br>
 <br>
 <br>
-</center>
-
-<br><br>
+</center><br>
 
 </body>
 </html>
