@@ -16,7 +16,7 @@ if (theForm.fmno.value == "")
 
 {
 
-alert("Please enter a value for the \"Roll no\" field.");
+alert("Please enter a value for the \"Roll Number\" field.");
 
 theForm.fmno.focus();
 
@@ -66,11 +66,11 @@ return (false);
 
 }
 
-if (theForm.fmno.value.length < 6)
+if (theForm.fmno.value.length < 4)
 
 {
 
-alert("Please enter at least 6 characters in the \"Roll no\" field.");
+alert("Please enter at least 4 characters in the \"Roll Number\" field.");
 
 theForm.fmno.focus();
 
@@ -78,11 +78,11 @@ return (false);
 
 }
 
-if (theForm.fmno.value.length > 6)
+if (theForm.fmno.value.length > 4)
 
 {
 
-alert("Please enter at most 6 characters in the \"Roll no\" field.");
+alert("Please enter at most 4 characters in the \"Roll Number\" field.");
 
 theForm.fmno.focus();
 
@@ -154,7 +154,7 @@ if (!allValid)
 
 {
 
-alert("Please enter only digit characters in the \"Roll no\" field.");
+alert("Please enter only digit characters in the \"Roll Number\" field.");
 
 theForm.fmno.focus();
 
@@ -166,7 +166,7 @@ if (decPoints > 1 || !validGroups)
 
 {
 
-alert("Please enter a valid number in the \"Roll no\" field.");
+alert("Please enter a valid number in the \"Roll Number\" field.");
 
 theForm.fmno.focus();
 
@@ -182,7 +182,7 @@ if (chkVal != "" && !(prsVal >= "170001" && prsVal <= "179999"))
 
 {
 
-alert("Please enter a valid number in the \"Form no\" field.");
+alert("Please enter a valid number in the \"Roll Number\" field.");
 
 theForm.fmno.focus();
 
@@ -196,7 +196,7 @@ return (true);
 
 //--></script>
 <center>
-<form name="FrontPage_Form1" method="post" action="/registration/iisstart.asp" onSubmit="return FrontPage_Form1_Validator(this)" language="JavaScript">
+<form name="FrontPage_Form1" id="roll" method="get" action="/inhouse" onSubmit="return FrontPage_Form1_Validator(this)" language="JavaScript">
 
 <!--<input type="hidden" value="" name="online_application_prefix">-->
 
@@ -208,9 +208,9 @@ return (true);
 
 <td><font face="Arial" size="3">Enter Your Roll Number :</font></td>
 
-&nbsp;<td>B&nbsp;
+&nbsp;<td>B17 &nbsp;
 
-<input name="fmno" size="6" maxlength="6" tabindex="0" type="tel" placeholder="Last six digits of roll number"></input><br></td>
+<input name="fmno" size="8" maxlength="4" tabindex="0" type="tel" placeholder="XXXX"></input><br></td>
 
 </tr>
 
