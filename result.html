@@ -23,13 +23,21 @@
 <form action="/inhouse" method="get">
 <fieldset>
 <div class="form-group"> 
+<label for="section">Section:</label> 
+<input class="input-medium" id="disabledInput" name="section" type="text" placeholder="Section B" disabled>
+</div>
+<div class="form-group"> 
+<label for="subject">Subject:</label> 
+<input class="input-medium" id="disabledInput" name="subject" type="text" placeholder="Field Theory" disabled>
+</div>
+<div class="form-group">
 <label for="roll">Roll Number*:</label> 
-<input type="tel" class="form-control" required="required" minlength="4" maxlength="4" id="roll" name="roll" aria-describedby="RollHelp" placeholder="Don't Include B17">
-<small id="RollHelp"> Last four digit of your roll number , if your roll number is B17<span style="text-color:#ff4500">1234</span> then search with input <span style="text-color:#ff4500">1234</span> </small>
+<input type="tel" class="input-medium" required="required" minlength="4" maxlength="4" id="roll" name="roll" aria-describedby="RollHelp" placeholder="Don't Include B17">
+<small id="RollHelp"> Last four digit of your roll number , if your roll number is B17<span style="text-color:yellow">1234</span> then search with input <span style="text-color:yellow">1234</span> </small>
 </div>
 <div class="form-group">
 <label for="name">Name*:</label>
-    <input type="text" name="name" id="name" minlength="3" placeholder="Enter your Full Name" class="form-control" required="required" aria-describedby="NameHelp" required>
+    <input type="text" name="name" id="name" minlength="3" placeholder="Enter your Full Name" class="input-medium" required="required" aria-describedby="NameHelp" required>
  <small id="NamHelp">Full name without any prefix like Sri , Mr. , Miss etc.</small>
 </div>
 <button type="submit" class="btn btn-primary">
