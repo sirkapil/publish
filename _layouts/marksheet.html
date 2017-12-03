@@ -32,11 +32,11 @@ th {
 {{ percentage }}
 {% endcapture %}
 {% capture grade %}
-{% if percentage >= '80' %}
+{% if percentage >= '81' %}
 A
-{% elsif percentage >= '60' and percentage < '80' %}
+{% elsif percentage >= '61' and percentage <= '80' %}
 B
-{% elsif percentage >= '40' and percentage < '60' %}
+{% elsif percentage >= '40' and percentage <= '60' %}
 C
 {% else %}
 D
