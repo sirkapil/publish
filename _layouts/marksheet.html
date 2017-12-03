@@ -28,9 +28,6 @@ th {
 {{ page.roll }}
 {% endcapture %}
 {% assign percentage = marks | times: multiply | round %}
-{% capture percentage %}
-{{ percentage }}
-{% endcapture %}
 <div class="card text-white bg-success">
 <div class="card-body">
 <div class="alert alert-dismissible alert-warning"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Disclaimer:</strong> Marks published here on net are for immediate information to you. Final marks are published on Notice Board or <a href="/notice">here</a>.</div>
@@ -62,14 +59,14 @@ th {
 <tr class="table-success">
 <th>Grade</th>
 <th>
-{% if page.marks >= 32 %}
+{% if percentage >= 80 %}
 A
 
-{% elsif page.marks < 32 and page.marks >= 24 %}
+{% elsif percentage < 80 and page.marks >= 60 %}
 
 B
 
-{% elsif page.marks < 24 and page.marks >= 16 %}
+{% elsif percentage < 60 and percentage >= 40 %}
 
 C
 {% endif %}
