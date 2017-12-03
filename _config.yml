@@ -1,5 +1,9 @@
 markdown: kramdown
 multiply: 2.5
 exam: Inhouse Exams (June 2016)
+semester: Part I , Semester I
 subject: Field Theory (Math14-101)
 include: [_redirects]
+tablecolor: warning
+alertcolor: danger
+buttoncolor: danger
