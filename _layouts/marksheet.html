@@ -25,6 +25,9 @@ th {
 {{ page.roll }}
 {% endcapture %}
 {% assign percentage = marks | times: 2.5 %}
+{% capture percentage %}
+{{ percentage }}
+{% endcapture %}
 
 <div class="card text-white bg-success">
 <div class="card-body">
@@ -52,11 +55,11 @@ th {
 </tr>
 <tr class="table-success">
 <th>Percentage</th>
-<th>{{ percentage }}</th>
+<th>{{ percentage }} %</th>
 </tr>
 <tr class="table-success">
 <th>Grade</th>
-<th></th>
+<th>{% if percentage >= '80' %}A{% endif %}{% if '60' <= percentage > '80' %}B{% endif %}{% if '40' <= percentage > '60' %}C{% endif %}</th>
 </tr>
 </tbody>   
 </table>
