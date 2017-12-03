@@ -34,11 +34,9 @@ th {
 {% capture grade %}
 {% if percentage >= '80' %}
 A
-{% endif %}
-{% if percentage >= '60' and percentage < '80' %}
+{% elsif percentage >= '60' and percentage < '80' %}
 B
-{% endif %}
-{% if percentage >= '40' and percentage < '60' %}
+{% elsif percentage >= '40' and percentage < '60' %}
 C
 {% endif %}
 {% endcapture %}
