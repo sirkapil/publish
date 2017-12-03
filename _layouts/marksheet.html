@@ -18,7 +18,7 @@ th {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-{% assign percentage = {{ page.marks }} | times: {{ site.multiply }} %}
+{% assign percentage = {{ page.marks }} | times: 2.5 %}
 <div class="card text-white bg-success">
 <div class="card-body">
 <div class="alert alert-dismissible alert-warning"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Disclaimer:</strong> Marks published here on net are for immediate information to you. Final marks are published on Notice Board or <a href="/notice">here</a>.</div>
