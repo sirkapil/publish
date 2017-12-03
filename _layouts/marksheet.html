@@ -21,10 +21,13 @@ th {
 {% capture marks %}
 {{ page.marks }}
 {% endcapture %}
+{% capture multiply %}
+{{ site.multiply }}
+{% endcapture %}
 {% capture roll %}
 {{ page.roll }}
 {% endcapture %}
-{% assign percentage = marks | times: 2.5 %}
+{% assign percentage = marks | times: multiply | round %}
 {% capture percentage %}
 {{ percentage }}
 {% endcapture %}
@@ -59,11 +62,11 @@ th {
 </tr>
 <tr class="table-success">
 <th>Grade</th>
-<th>{% if percentage >= "80.0" %}
+<th>{% if percentage >= 80 %}
 A{% endif %}
-{% if percentage >= "60.0" and percentage < "80.0" %}B
+{% if percentage >= 60 and percentage < 80 %}B
 {% endif %}
-{% if percentage >= "40.0" and percentage < "60.0" %}C
+{% if percentage >= 40 and percentage < 60 %}C
 {% endif %}</th>
 </tr>
 </tbody>   
