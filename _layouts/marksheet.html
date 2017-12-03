@@ -35,7 +35,7 @@ th {
 <div class="card-body">
 <div class="alert alert-dismissible alert-warning"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Disclaimer:</strong> Marks published here on net are for immediate information to you. Final marks are published on Notice Board or <a href="/notice">here</a>.</div>
 <h4 class="list-group-item-heading">
-<center>Result</center></h4><p class="list-group-item-text"><center>Inhouse Examinations, June-2017<br />Field Thoery (Math14-101)</center>
+<center>Result</center></h4><p class="list-group-item-text"><center>{{ site.exam }}<br />{{ site.subject }}</center>
 </p>
   <table class="table table-striped table-hover table-bordered">
 <tbody>
@@ -62,14 +62,14 @@ th {
 <tr class="table-success">
 <th>Grade</th>
 <th>
-{% if percentage >= "80" %}
+{% if page.marks >= "32" %}
 A
 
-{% elsif percentage < "80" and percentage >= "60" %}
+{% elsif page.marks < "32" and page.marks >= "24" %}
 
 B
 
-{% elsif percentage < "60" and percentage >= "40" %}
+{% elsif page.marks < "24" and page.marks >= "16" %}
 
 C
 {% endif %}
