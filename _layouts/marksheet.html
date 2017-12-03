@@ -18,7 +18,9 @@ th {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-{% assign percentage = {{ page.marks }} | times: 2.5 %}
+{% assign marks = '{{ page.marks }}' %}
+{% assign percentage = '{{ page.marks  }} | times: 2.5' %}
+
 <div class="card text-white bg-success">
 <div class="card-body">
 <div class="alert alert-dismissible alert-warning"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Disclaimer:</strong> Marks published here on net are for immediate information to you. Final marks are published on Notice Board or <a href="/notice">here</a>.</div>
@@ -49,11 +51,7 @@ th {
 </tr>
 <tr class="table-success">
 <th>Grade</th>
-<th>{% if {{ percentage }} >= "80" %} A 
-{% endif %}
-{% if "60" <= {{ percentage }} < "80" %} B {% endif %}
-{% if "40" <= {{ percentage }} < "60" %} C {% endif %}
-</th>
+<th></th>
 </tr>
 </tbody>   
 </table>
