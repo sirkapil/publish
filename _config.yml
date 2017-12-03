@@ -7,5 +7,5 @@ class: M.Sc. Mathematics
 subject: Field Theory (Math14-101)
 include: [_redirects]
 tablecolor: danger
-alertcolor: warning
+alertcolor: success
 buttoncolor: success
