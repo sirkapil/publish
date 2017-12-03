@@ -59,13 +59,18 @@ th {
 </tr>
 <tr class="table-success">
 <th>Grade</th>
-<th>{% if percentage >= "80.0" %}A{% endif %}{% if percentage >= "60.0" and percentage < "80.0" %}B{% endif %}{% if percentage >= "40.0" and percentage < "60.0" %}C{% endif %}</th>
+<th>{% if percentage >= "80.0" %}
+A{% endif %}
+{% if percentage >= "60.0" and percentage < "80.0" %}B
+{% endif %}
+{% if percentage >= "40.0" and percentage < "60.0" %}C
+{% endif %}</th>
 </tr>
 </tbody>   
 </table>
 <h5 class="card-header">Teacher's Remark</h5>
 <div class="card-header"><ul type="circle">
-<li><p>{{ page.teachers-remark }}</p></li>
+<li><p>{{ page.remark }}</p></li>
 <li><p>Save your result , it may not be available after a span of time.</p></li>
 </ul></div>
 
