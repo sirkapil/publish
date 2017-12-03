@@ -15,9 +15,11 @@ layout: none
   <body>
 <div class="card text-white bg-success">
 <div class="card-body">
-<div class="alert alert-dismissible alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Note:</strong> Only for students in<ul type="circle"> <li>{{ site.semester }}</li> <li>{{ site.class }} </li>
+<div class="alert alert-dismissible alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Note:</strong> Only for students admitted in<ul type="circle">
+<li>{{ site.class }}</li>
+<li>{{ site.semester }}</li> 
 </ul>
-This is result of course {{ site.subject }} that i teach to you and I have no information about results of other courses. </div>
+This is result of course {{ site.subject }} that i teach to you and i have no information about results of other courses. </div>
 <div class="card text-white bg-success">
 <div class="card-body">
 <h4 class="list-group-item-heading">
@@ -33,7 +35,7 @@ This is result of course {{ site.subject }} that i teach to you and I have no in
 </div>
 <div class="form-group"> 
 <label for="subject">Subject:</label> 
-<input class="form-control" id="disabledInput" name="subject" type="text" placeholder="Field Theory" disabled>
+<input class="form-control" id="disabledInput" name="subject" type="text" placeholder="{{ site.subject }}" disabled>
 </div>
 <div class="form-group">
 <label for="roll">Roll Number*:</label> 
