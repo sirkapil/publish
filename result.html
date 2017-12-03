@@ -12,11 +12,11 @@
   <body>
 <div class="card text-white bg-success">
 <div class="card-body">
-<div class="alert alert-dismissible alert-warning"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Note:</strong> Only for students in B section , 1st Semester ( MSc Maths ). This is result of course (Field Theory) that i teach to you and I have no information about results of other courses. </div>
-<div class="card text-white bg-success">
+<div class="alert alert-dismissible alert-{{ site.alertcolor }}"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Note:</strong> Only for students in B section , 1st Semester ( MSc Maths ). This is result of course (Field Theory) that i teach to you and I have no information about results of other courses. </div>
+<div class="card text-white bg-{{ site.tablecolor }}">
 <div class="card-body">
 <h4 class="list-group-item-heading">
-<center>Result</center></h4><p class="list-group-item-text"><center>Inhouse Examinations, June-2017<br />Field Thoery (Math14-101)</center>
+<center>Result</center></h4><p class="list-group-item-text"><center>{{ site.exam }}<br />{{ site.semester }}<br />{{ site.subject }}</center>
 </p>
 <br /><br /><br />
 <center>
@@ -40,7 +40,7 @@
     <input type="text" name="name" id="name" minlength="3" placeholder="Enter your Full Name" class="form-control" required="required" aria-describedby="NameHelp" required>
  <small id="NamHelp">Full name without any prefix like Sri , Mr. , Miss etc.</small>
 </div>
-<button type="submit" class="btn btn-primary">
+<button type="submit" class="btn btn-{{ site.buttoncolor }}">
    Search
    </button>
 </fieldset>
@@ -51,7 +51,7 @@
 <br /><br /><br /><br /><br /><br />
 <strong>Note:</strong> <ul type="circle"><li> Fields marked with star(*) are compulsory to fill.</li>
 <li>Marks published here on internet are for immediate information to you. there may be possibility of human error in manually posting of marks to internet.</li>
-<li>Final marks are published on Notice Board or <a href="/notice"><span class="badge badge-warning">here</span></a></li></ul></p>
+<li>Final marks are published on Notice Board or <a href="/notice"><span class="badge badge-{{ site.buttoncolor }}">here</span></a></li></ul></p>
 </div>
 </div>
 </article>
