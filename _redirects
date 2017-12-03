@@ -1,1 +1,1 @@
-/inhouse roll=:roll  /inhouse/result/:roll  301
+/inhouse roll=:roll year=:year exam=:exam course=:course part=:part sem=:sem section=:section /year/:year/:course/:part/:sem/:subject/:exam/result/:section/:roll  301
