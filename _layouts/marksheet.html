@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <style>
+th {
+  text-align: center;
+  vertical-align: middle;
+}
+    </style>
+   
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+{% assign percentage = {{ page.marks }} | times: {{ site.multiply }} %}
+<div class="card text-white bg-success">
+<div class="card-body">
+<div class="alert alert-dismissible alert-warning"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Disclaimer:</strong> Marks published here on net are for immediate information to you. Final marks are published on Notice Board or <a href="/notice">here</a>.</div>
+<h4 class="list-group-item-heading">
+<center>Result</center></h4><p class="list-group-item-text"><center>Inhouse Examinations, June-2017<br />Field Thoery (Math14-101)</center>
+</p>
+  <table class="table table-striped table-hover table-bordered">
+<tbody>
+<tr class="table-success">
+<th>Roll No.</th>
+<th>{{ page.roll }}</th>
+</tr>
+<tr class="table-success">
+<th>College</th>
+<th>{{ page.college }}</th>
+</tr>
+<tr class="table-success">
+<th>Full Name</th>
+<th>{{ page.name }}</th>
+</tr>
+<tr class="table-success">
+<th>Marks</th>
+<th>{{ page.marks }}</th>
+</tr>
+<tr class="table-success">
+<th>Percentage</th>
+<th>{{ percentage }}</th>
+</tr>
+<tr class="table-success">
+<th>Grade</th>
+<th>{% if {{ percentage }} >= "80" %} A 
+{% endif %}
+{% if "60" <= {{ percentage }} < "80" %} B {% endif %}
+{% if "40" <= {{ percentage }} < "60" %} C {% endif %}
+</th>
+</tr>
+</tbody>   
+</table>
+<h5 class="card-header">Teacher's Remark</h5>
+<div class="card-header"><ul type="circle">
+<li><p>{{ page.teachers-remark }}</p></li>
+<li><p>Save your result , it may not be available after a span of time.</p></li>
+</ul></div>
+
+
+
+
+
+<br /><br /><br /><br /><br /><br />
+<p>
+<strong>Note:</strong> <ul type="circle"><li>I have tried my best to provide you correct result details , if you think something is wrong then <a href="//contact.sirkapil.me"><span class="badge badge-warning">contact me</span></a>.</li>
+<li>Don't forget to mention your roll number in message box while reporting problem !</li></ul></p>
+</div>
+</div>
+  </body>
+</html>
