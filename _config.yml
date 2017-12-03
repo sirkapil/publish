@@ -4,6 +4,6 @@ exam: Inhouse Exams ,June 2016
 semester: Part I  , Semester I
 subject: Field Theory (Math14-101)
 include: [_redirects]
-tablecolor: success
+tablecolor: info
 alertcolor: danger
 buttoncolor: warning
