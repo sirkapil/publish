@@ -31,7 +31,17 @@ th {
 {% capture percentage %}
 {{ percentage }}
 {% endcapture %}
-
+{% capture grade %}
+{% if percentage >= '80' %}
+A
+{% endif %}
+{% if percentage >= '60' and percentage < '80' %}
+B
+{% endif %}
+{% if percentage >= '40' and percentage < '60' %}
+C
+{% endif %}
+{% endcapture %}
 <div class="card text-white bg-success">
 <div class="card-body">
 <div class="alert alert-dismissible alert-warning"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Disclaimer:</strong> Marks published here on net are for immediate information to you. Final marks are published on Notice Board or <a href="/notice">here</a>.</div>
@@ -62,12 +72,7 @@ th {
 </tr>
 <tr class="table-success">
 <th>Grade</th>
-<th>{% if percentage >= '80' %}
-A{% endif %}
-{% if percentage >= '60' and percentage < '80' %}B
-{% endif %}
-{% if percentage >= '40' and percentage < '60' %}C
-{% endif %}</th>
+<th>{{ grade }}</th>
 </tr>
 </tbody>   
 </table>
