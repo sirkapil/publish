@@ -18,8 +18,13 @@ th {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-{% assign marks = '{{ page.marks }}' %}
-
+{% capture marks %}
+{{ page.marks }}
+{% endcapture %}
+{% capture roll %}
+{{ page.roll }}
+{% endcapture %}
+{% assign percentage = marks | times: 2.5 %}
 
 <div class="card text-white bg-success">
 <div class="card-body">
@@ -31,7 +36,7 @@ th {
 <tbody>
 <tr class="table-success">
 <th>Roll No.</th>
-<th>{{ page.roll }}</th>
+<th>{{ roll }}</th>
 </tr>
 <tr class="table-success">
 <th>College</th>
@@ -39,7 +44,7 @@ th {
 </tr>
 <tr class="table-success">
 <th>Full Name</th>
-<th>{{ page.name }}</th>
+<th>{{ page.fullname }}</th>
 </tr>
 <tr class="table-success">
 <th>Marks</th>
