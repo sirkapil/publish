@@ -39,15 +39,17 @@ This is result of course {{ site.subject }} that i teach to you and i have no in
 <input type="hidden" value="{{ page.sem }}" name="sem">
 <input type="hidden" value="{{ page.part }}" name="part">
 <input type="hidden" value="{{ page.exam }}" name="exam">
+<input type="hidden" value="{{ page.section }}" name="section">
+<input type="hidden" value="{{ page.subject }}" name="subject">
 <input type="hidden" value="{{ page.course }}" name="course">
 <fieldset>
 <div class="form-group"> 
 <label for="section">Section:</label> 
-<input class="form-control" id="disabledInput" name="section" type="text" placeholder="Section B"  value="b" disabled>
+<input class="form-control" id="disabledInput" name="section" type="text" placeholder="Section B" disabled>
 </div>
 <div class="form-group"> 
 <label for="subject">Subject:</label> 
-<input class="form-control" id="disabledInput" name="subject" type="text" placeholder="{{ site.subject }}"  value="{{ page.subject }}" disabled>
+<input class="form-control" id="disabledInput" name="subject" type="text" placeholder="{{ site.subject }}" disabled>
 </div>
 <div class="form-group">
 <label for="roll">Roll Number*:</label> 
