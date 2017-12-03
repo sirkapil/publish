@@ -6,6 +6,6 @@ semester: Part I  , Semester I
 class: M.Sc. Mathematics
 subject: Field Theory (Math14-101)
 include: [_redirects]
-tablecolor: danger
-alertcolor: warning
-buttoncolor: warning
+tablecolor: dark
+alertcolor: danger
+buttoncolor: danger
