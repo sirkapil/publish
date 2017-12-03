@@ -62,14 +62,14 @@ th {
 <tr class="table-success">
 <th>Grade</th>
 <th>
-{% if page.marks >= "32" %}
+{% if page.marks >= 32 %}
 A
 
-{% elsif page.marks < "32" and page.marks >= "24" %}
+{% elsif page.marks < 32 and page.marks >= 24 %}
 
 B
 
-{% elsif page.marks < "24" and page.marks >= "16" %}
+{% elsif page.marks < 24 and page.marks >= 16 %}
 
 C
 {% endif %}
