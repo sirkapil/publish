@@ -62,11 +62,11 @@ th {
 </tr>
 <tr class="table-success">
 <th>Grade</th>
-<th>{% if percentage >= 80 %}
+<th>{% if percentage >= '80' %}
 A{% endif %}
-{% if percentage >= 60 and percentage < 80 %}B
+{% if percentage >= '60' and percentage < '80' %}B
 {% endif %}
-{% if percentage >= 40 and percentage < 60 %}C
+{% if percentage >= '40' and percentage < '60' %}C
 {% endif %}</th>
 </tr>
 </tbody>   
