@@ -15,7 +15,8 @@ layout: none
   <body>
 <div class="card text-white bg-success">
 <div class="card-body">
-<div class="alert alert-dismissible alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Note:</strong> Only for students in B section , 1st Semester ( MSc Maths ). This is result of course (Field Theory) that i teach to you and I have no information about results of other courses. </div>
+<div class="alert alert-dismissible alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Note:</strong> Only for students in<ul type="circle"> <li>{{ site.semester }}</li> <li>{{ site.class }} </li>
+This is result of course {{ site.subject }} that i teach to you and I have no information about results of other courses. </div>
 <div class="card text-white bg-success">
 <div class="card-body">
 <h4 class="list-group-item-heading">
