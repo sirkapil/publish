@@ -28,6 +28,99 @@ th {
 {{ page.roll }}
 {% endcapture %}
 {% assign percentage = marks | times: multiply | round %}
+{% capture remarks %}
+{% if percentage >= 95 %}
+Congrats , you scored more than 95% marks ! You are among top scorers of this {{ site.subject }} test. Keep it up !
+
+{% elsif percentage < 95 and page.marks >= 90 %}
+
+Congrats , you scored more than 90% marks ! You are among top scorers of this {{ site.subject }} test. Keep it up ! 
+
+{% elsif percentage < 90 and percentage >= 80 %}
+
+I know you have potential to perform better than this.
+
+{% elsif percentage < 80 and percentage >= 75 %}
+
+you missed grade A by just few marks , hopefully you will grab better grades next time ! 
+
+{% elsif percentage < 75 and percentage >= 70 %}
+
+Grade B+ ain't enough ! start studying , you can perform better than this.
+
+{% elsif percentage < 70 and percentage >= 60 %}
+Are you happy with grade B ? if answer is NO then start studying regularly for upcoming exams.
+
+{% elsif percentage < 60 and percentage >= 55 %}
+
+Forget about this poor performance and focus on upcoming exams. I believe that you will perform better next time. Grab your books , {{ page.fullname }} ! this is poor performance.
+
+{% elsif percentage < 55 and percentage >= 50 %}
+
+Forget about this poor performance and focus on upcoming exams. I believe that you will perform better next time. Grab your books , {{ page.fullname }} ! this  is poor performance.
+
+{% elsif percentage < 50 and percentage >= 40 %}
+
+I want you to be present in my office room after lecture time or 2 PM.
+
+{% elsif percentage < 40 and percentage >= 30 %}
+
+I want you to be present in my office room after lecture time or 2 PM.
+
+{% elsif percentage < 30 %}
+
+I want you to be present in my office room after lecture time or 2 PM.
+
+
+{% endif %}
+{% endcapture %}
+{% capture grade %}
+{% if percentage >= 95 %}
+A++
+
+{% elsif percentage < 95 and page.marks >= 90 %}
+
+A+
+
+{% elsif percentage < 90 and percentage >= 80 %}
+
+A
+
+{% elsif percentage < 80 and percentage >= 75 %}
+
+B++
+
+{% elsif percentage < 75 and percentage >= 70 %}
+
+B+
+
+{% elsif percentage < 70 and percentage >= 60 %}
+B
+
+{% elsif percentage < 60 and percentage >= 55 %}
+
+C++
+
+{% elsif percentage < 55 and percentage >= 50 %}
+
+C+
+
+{% elsif percentage < 50 and percentage >= 40 %}
+
+C
+
+{% elsif percentage < 40 and percentage >= 30 %}
+
+D
+
+{% elsif percentage < 30 %}
+
+E
+
+
+{% endif %}
+{% endcapture %}
+
 <div class="card text-white bg-{{ site.tablecolor }}">
 <div class="card-body">
 <div class="alert alert-dismissible alert-{{ site.alertcolor }}"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Disclaimer:</strong> Marks published here on net are for immediate information to you. Final marks are published on Notice Board or <a href="/notice">here</a>.</div>
@@ -59,24 +152,18 @@ th {
 <tr class="table-{{ site.tablecolor }}">
 <th>Grade</th>
 <th>
-{% if percentage >= 80 %}
-A
-
-{% elsif percentage < 80 and page.marks >= 60 %}
-
-B
-
-{% elsif percentage < 60 and percentage >= 40 %}
-
-C
-{% endif %}
+{{ grade }}
 </th>
 </tr>
 </tbody>   
 </table>
 <h5 class="card-header">Teacher's Remark</h5>
 <div class="card-header"><ul type="circle">
+{% if page.remark == true %}
 <li><p>{{ page.remark }}</p></li>
+{% else %}
+<li><p>{{ remarks }}</p></li>
+{% endif %}
 <li><p>Save your result , it may not be available after a span of time.</p></li>
 </ul></div>
 
@@ -90,5 +177,5 @@ C
 <li>Don't forget to mention your roll number in message box while reporting problem !</li></ul></p>
 </div>
 </div>
-  </body>
+</body>
 </html>
